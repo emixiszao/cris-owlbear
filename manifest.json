@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "manifest_version": 1,
   "description": "Abre o site do Cris (Ordem Paranormal) dentro do Owlbear, sem precisar de outra aba.",
-  "author": "Seu Nome",
+  "author": "@mestremxrpg no Youtube",
   "icon": "https://emixiszao.github.io/cris-owlbear/icon.svg",
   "action": {
     "title": "Cris",
