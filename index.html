@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cris</title>
+<style>
+  :root { --bg:#1e2231; --text:#e8e6f0; --muted:#9aa0b8; --accent:#7a5cd6; --alt:#3a4260; }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:16px; background:var(--bg); color:var(--text); font-family:system-ui,sans-serif; text-align:center; }
+  h1 { margin:0 0 4px; font-size:16px; }
+  p { margin:0 0 14px; font-size:12px; color:var(--muted); }
+  button { display:block; width:100%; margin-bottom:8px; padding:11px; border:0; border-radius:8px; font-size:14px; font-weight:600; color:#fff; cursor:pointer; }
+  button:hover { filter:brightness(1.15); }
+  #mesa { background:var(--accent); }
+  #aba { background:var(--alt); }
+  small { display:block; margin-top:6px; font-size:11px; color:var(--muted); line-height:1.4; }
+</style>
+</head>
+<body>
+  <h1>Cris — Ordem Paranormal</h1>
+  <p>Fichas e painel do mestre</p>
+  <button id="mesa">Abrir na mesa</button>
+  <button id="aba">Abrir em nova aba</button>
+  <small>Se a janela da mesa ficar em branco, o site não permite ser aberto aqui. Use a nova aba.</small>
+
+<script type="module">
+import OBR from "https://esm.sh/@owlbear-rodeo/sdk@3";
+
+const URL_CRIS = "https://crisordemparanormal.com";
+const MODAL_ID = "com.cris.ordem/modal";
+
+OBR.onReady(() => {
+  document.getElementById("mesa").addEventListener("click", async () => {
+    await OBR.modal.open({
+      id: MODAL_ID,
+      url: URL_CRIS,
+      width: 1100,
+      height: 700,
+      hideBackdrop: true
+    });
+  });
+
+  document.getElementById("aba").addEventListener("click", () => {
+    window.open(URL_CRIS, "_blank", "noopener");
+  });
+});
+</script>
+</body>
+</html>

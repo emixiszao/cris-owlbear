@@ -1,0 +1,15 @@
+{
+  "name": "Cris Ordem Paranormal",
+  "version": "1.0.0",
+  "manifest_version": 1,
+  "description": "Abre o site do Cris (Ordem Paranormal) dentro do Owlbear, sem precisar de outra aba.",
+  "author": "Seu Nome",
+  "icon": "https://emixiszao.github.io/cris-owlbear/icon.svg",
+  "action": {
+    "title": "Cris",
+    "icon": "https://emixiszao.github.io/cris-owlbear/icon.svg",
+    "popover": "https://emixiszao.github.io/cris-owlbear/index.html",
+    "width": 300,
+    "height": 230
+  }
+}
